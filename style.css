@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+/*Global*/
+*{
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+/*Header*/
+#header {
+  background-color: rgb(233, 233, 233);
+  border-bottom: 5px solid rgb(122, 122, 122);
+  text-align: center;
+  padding: 1%;
+  cursor: default;
+}
+#header h1 {
+  font-size: 4rem;
+  font-family: 'Tangerine', cursive;
+}
+#header h2 {
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*Main*/
+#main-container {
+  padding-top: 1%;
+  background: rgb(10, 37, 112);
+  min-height: 80vh;
+  cursor: default;
+}
+
+#facts-container{
+  min-height: 77vh;
+}
+
+.fact-div{
+  background-color: rgb(230, 230, 230);
+  margin: 0% 20% 2% 20%;
+  min-height: 140px;
+  box-shadow: rgb(116, 116, 116) 20px 15px 0px 0px;
+  transition-duration: 1s;
+  font-family: 'Quicksand', sans-serif;
+}
+.fact-div:hover{
+  box-shadow: rgb(116, 116, 116) 35px 15px 0px 0px;
+  transition-duration: 0.5s;
+}
+
+.fact-num {
+  font-family: 'Tangerine', cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(32, 32, 32);
+  padding-left: 10px;
+  margin-bottom: 1.5%;
+  border-bottom: rgb(10, 37, 112) 1px solid;
+  width: 150px;
+  transition-duration: 1s;
+}
+.fact-div:hover .fact-num{
+  padding-left: 50px;
+  width: 110px;
+  transition-duration: 0.5s;
+}
+
+.fact-txt {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  padding: 0% 5% 2% 5%;
+  text-align: justify;
+}
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 10%;
+}
+
+#error h3 {
+  background-color: aqua;
+  text-align: center;
+}
+
+/*Paging*/
+#paging {
+  height: 50px;
+  bottom: 0px;
+
+  text-align: center;
+  background-color: rgb(218, 218, 218);
+  border-top: rgb(99, 99, 99) 5px solid;
+}
+
+/*numbered buttons*/
+#paging button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-left: 0.2%;
+  margin-right: 0.2%;
+  margin-top: 0.5%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3rem;
+  background: none;
+  transition-duration: 0.4s;
+  
+}
+#paging button:hover {
+  background-color: rgb(243, 172, 79);
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.mark-page {
+  border: 2px solid rgb(243, 172, 79) !important; 
+}
+
+/*back & next buttons*/
+#move-btns {
+  display: none;
+  width: 100%;
+}
+#move-btns button {
+  height: 30px;
+  width: 100px;
+  border: none;
+  background: none;
+  transition-duration: 1s;
+  font-family: 'Quicksand', sans-serif; 
+  font-size: 1.2rem;
+}
+#move-btns button:hover {
+  background-color: rgb(243, 172, 79);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+#randomize {
+  width: 200px !important;
+}
+#randomize:hover{
+  transition-duration: 0.5s;
+}
+
+#back-btn p {
+  transition-duration: 0.5s;
+}
+#back-btn:hover p{
+  margin-left: -20%;
+  transition-duration: 0.5s;
+}
+
+#next-btn p {
+  transition-duration: 0.5s;
+}
+#next-btn:hover p{
+  margin-right: -20%;
+  transition-duration: 0.5s;
+}
+
+.hide {
+  display: none;
+}
+
+@media(max-width: 900px) {
+  .fact-div{
+    margin: 0% 10% 2% 10%;
+    box-shadow: rgb(104, 104, 104) 10px 5px 0px 0px;
+  }
+  .fact-div:hover{
+    box-shadow: rgb(104, 104, 104) 20px 5px 0px 0px;
+  }
+  #page-nums {
+    display: none;
+  }
+  #move-btns {
+    display: block;
+  }
+}
